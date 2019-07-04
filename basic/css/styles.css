@@ -1,0 +1,68 @@
+body{
+    background: #333;
+}
+/* .wrapper{
+     position: relative; 
+     top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%); 
+} */
+
+.box{
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    height:200px;
+    width:200px;
+    position: absolute;
+    animation-name: myanimation;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+
+
+}
+
+@keyframes myanimation{
+    /* 0%{
+        background: #fff;
+        border-radius: 0 0 0 0;
+        translateX:0px;
+        top:0px;
+    } */
+    0%{
+        background:red;
+        border-radius: 50% 0 0 0;
+        transform: translateX(0);
+        transform: translateY(0);
+    }
+    25%{
+        background: green;
+        border-radius: 50% 50% 0 0;
+        transform: translateX(200px);
+        transform: translateY(0);
+    }
+
+    50%{
+        background: green;
+        border-radius: 50% 50% 0 0;
+        transform: translateX(200px);
+        transform: translateY(200px);
+    }
+    75%{
+        background: blue;
+        border-radius: 50% 50% 50% 0;
+        transform: translateX(-200px);
+        transform: translateY(0);
+    }
+    100%{
+        background: yellow;
+        border-radius: 50% 50% 50% 50%;
+        transform: translateX(0);
+        transform: translateY(-200px);
+    }
+    
+}
